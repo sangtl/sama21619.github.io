@@ -12,6 +12,7 @@
 .row {
     display: flex;
     flex-wrap: wrap;
+   
     margin-left: -4px;
     margin-right: -4px;
 }
@@ -444,21 +445,23 @@
         margin-left: -12px;
         margin-right: -12px;
     }
-
-    .wide .row.sm-gutter {
+    .wide .row.sm-gutter  {
         margin-left: -5px;
         margin-right: -5px;
     }
+    .wide .row.sm-gutter .col {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+   
 
     .wide .col {
         padding-left: 12px;
         padding-right: 12px;
     }
 
-    .wide .row.sm-gutter .col {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
+    
 
     .wide .l-0 {
         display: none;
@@ -490,11 +493,7 @@
         max-width: 16.66667%;
     }
 
-    .wide .l-2-4 {
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
-
+    
     .wide .l-3 {
         flex: 0 0 25%;
         max-width: 25%;
@@ -544,48 +543,10 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
-
-    .wide .l-o-1 {
-        margin-left: 8.33333%;
+    .wide .l-2-4{
+        flex: 0 0 20%;
+        max-width: 20%;
     }
 
-    .wide .l-o-2 {
-        margin-left: 16.66667%;
-    }
-
-    .wide .l-o-3 {
-        margin-left: 25%;
-    }
-
-    .wide .l-o-4 {
-        margin-left: 33.33333%;
-    }
-
-    .wide .l-o-5 {
-        margin-left: 41.66667%;
-    }
-
-    .wide .l-o-6 {
-        margin-left: 50%;
-    }
-
-    .wide .l-o-7 {
-        margin-left: 58.33333%;
-    }
-
-    .wide .l-o-8 {
-        margin-left: 66.66667%;
-    }
-
-    .wide .l-o-9 {
-        margin-left: 75%;
-    }
-
-    .wide .l-o-10 {
-        margin-left: 83.33333%;
-    }
-
-    .wide .l-o-11 {
-        margin-left: 91.66667%;
-    }
+   
 }
