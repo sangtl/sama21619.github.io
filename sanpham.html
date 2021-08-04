@@ -8,6 +8,7 @@
     
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +18,7 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid wide">
+            <div class="grid wide hide-on-mobile">
                 <nav class="header__navbar">
                     <ul class="header__navbar-list">
                        <li class="header__navbar-item">Hotline: 0345290616</li>
@@ -62,9 +63,9 @@
                
 
             </div>
-            <div class="header__underline"></div>
+            <div class="header__underline hide-on-mobile"></div>
 
-            <div class="grid wide">
+            <div class="grid wide hide-on-mobile">
                 <nav class="header__navbar">
                     <a href="" class="header__navbar-item-link">
                        <img src="https://fs-07.web4s.vn/uploads/plugin/setting/3/th-i-trang-cong-s-logo-1.png" alt="Logo">
@@ -94,21 +95,118 @@
 
                     </ul>
                     <ul class="header__navbar-list">
-                        <a href="" class="header__navbar-item-link">
+                        <a href="" class="header__navbar-item-link search-link">
                             <li class="header__navbar-item"><i class="header__navbar-icon fas fa-search"></i></li>
                         </a>
                         <a href="" class="header__navbar-item-link">
                             <li class="header__navbar-item"><i class="header__navbar-icon fas fa-sync-alt"></i></li>
                         </a>
-                        <a href="" class="header__navbar-item-link">
+                        <a href="" class="header__navbar-item-link cart-link">
                             <li class="header__navbar-item"><i class="header__navbar-icon fas fa-shopping-bag"></i></li>
                         </a>
+                        <div class="header-timkiem">
+                            <div class="header-timkiem-wrap">
+                                <input type="text" class="o-tim-kiem" placeholder="Từ khóa tìm kiếm">
+                                <button class="btn-search"> <i class="fas fa-search"></i></button>
+                               
+                            </div>
+                        </div>
+
+                        <div class="header-cart">
+                            <p>Không có sản phẩm nào trong giỏ hàng</p>
+                        </div>
+
 
 
 
                     </ul>
                     </nav>
                     </div>
+
+                     <!-- mobile -->
+                     <div class="grid hide-on-pc">
+                        <div class="row">
+                            <div class="col c-6 ">
+                                
+                                    <div class="header__navbar-list__mobile">
+                                       <p class="header__navbar-item__mobile">Hotline: 0345290616</p>
+                                    </div>
+                            </div>
+
+                            <div class="col c-6">
+                                <div class="header__navbar-list__mobile fl-right">
+                                        <a href="" class="header__navbar-item-link dang-ky">
+                                            
+                                         Đăng Ký /
+                 
+                                        </a>
+                                        
+                                        <a href="" class="header__navbar-item-link dang-nhap">
+                                        Đăng Nhập
+                 
+                                        </a>
+                                </div>
+
+                            </div>
+
+                                   
+
+                               
+
+                            </div>
+                        </div>
+                        <div class="header__underline hide-on-pc"></div>
+
+                        <div class="logo__on-mobile hide-on-pc">
+                            <div class="logo__on-mobile-wrap">
+                            <a href="" class="header__navbar-logo-link pd-mobile  ">
+                                <img src="https://fs-07.web4s.vn/uploads/plugin/setting/3/th-i-trang-cong-s-logo-1.png" alt="Logo">
+                            </a>
+                          </div>
+                        </div>
+                   
+
+
+                    <div class="grid hide-on-pc">
+                        <div class="row bc">
+                            <div class="col c-3">
+                                <div class="bar-mobile">
+                                    <a href="" class="btn-menu-main"><i class="fas fa-bars"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="col c-9 pd-right-mobile">
+                                <div class="three-icon-mobile">
+                                    
+                                <a href="" class="header__navbar-item-link search-link">
+                                    <li class="header__navbar-item"><i class="header__navbar-icon fas fa-search"></i></li>
+                                    
+                                   
+                                </a>
+                                <a href="" class="header__navbar-item-link">
+                                    <li class="header__navbar-item"><i class="header__navbar-icon fas fa-sync-alt"></i></li>
+                                </a>
+                                <a href="" class="header__navbar-item-link cart-link">
+                                    <li class="header__navbar-item"><i class="header__navbar-icon fas fa-shopping-bag"></i></li>
+                                </a>
+                                <div class="header-timkiem">
+                                    <div class="header-timkiem-wrap">
+                                        <input type="text" class="o-tim-kiem" placeholder="Từ khóa tìm kiếm">
+                                        <button class="btn-search"> <i class="fas fa-search"></i></button>
+                                       
+                                    </div>
+                                </div>
+        
+                                <div class="header-cart">
+                                    <p>Không có sản phẩm nào trong giỏ hàng</p>
+                                </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+            
             
 
            
@@ -122,7 +220,7 @@
 
             <div class="grid">
                 <div class="row">
-                    <div class="col l-3">
+                    <div class="col l-3 c-12">
                      <div class="title_style">
                         <h3>
                             <i class="fas fa-bars"></i> DANH MỤC SẢN PHẨM
@@ -303,15 +401,16 @@
                     
                 </div>
 
-                <div class="col l-9">
+                <div class="col l-9 c-12">
                     <div class="title-sp">
                         <h3>THỜI TRANG MỚI <span>(31 sản phẩm)</span></h3>
                     </div>
-                    <div class="row">
-                        <div class="col l-4">
-                            <div class="sanpham active ">
+                    <div class="row show-product active">
+                        <div class="col l-4 m-4  c-12">
+                            <!-- PAGE-1 -->
+                            <div class="sanpham-product">
                                 <div class="product__sport-wrap flex-cl">
-                                    <div class="sp__combo1">
+                                    <div class="sp__combo">
                                         <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/ao1.jpg" alt=""></a>
                                         <div class="product__sport">
                                             <a href="" class="product__sport-link">
@@ -327,7 +426,7 @@
                                             </p>
                                         
                                         </div>
-                                        <div class="detail-product1">
+                                        <div class="detail-product">
                                             <a href="">
                                                <i class="fas fa-search"></i>
                                             </a>
@@ -342,7 +441,7 @@
                                         </div>
                                     </div>
             
-                                    <div class="sp__combo2">
+                                    <div class="sp__combo">
                                         <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/ao2.jpg" alt=""></a>
                                         <div class="product__sport">
                                             <a href="" class="product__sport-link">
@@ -356,7 +455,7 @@
                                             </p>
                                         
                                         </div>
-                                        <div class="detail-product2">
+                                        <div class="detail-product">
                                             <a href="">
                                                <i class="fas fa-search"></i>
                                             </a>
@@ -371,7 +470,7 @@
                                         </div>
                                     </div>
             
-                                    <div class="sp__combo3">
+                                    <div class="sp__combo">
                                         <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/ao3.jpg" alt=""></a>
                                         <div class="product__sport">
                                             <a href="" class="product__sport-link">
@@ -385,7 +484,7 @@
                                             </p>
                                         
                                         </div>
-                                        <div class="detail-product3">
+                                        <div class="detail-product">
                                             <a href="">
                                                <i class="fas fa-search"></i>
                                             </a>
@@ -400,7 +499,7 @@
                                         </div>
                                     </div>
             
-                                    <div class="sp__combo4">
+                                    <div class="sp__combo">
                                         <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/ao4.jpg" alt=""></a>
                                         <div class="product__sport">
                                             <a href="" class="product__sport-link">
@@ -415,7 +514,7 @@
                                         
                                         </div>
             
-                                        <div class="detail-product4">
+                                        <div class="detail-product">
                                             <a href="">
                                                <i class="fas fa-search"></i>
                                             </a>
@@ -444,11 +543,11 @@
             
                           
                         </div>
-                        <div class="col l-4">
+                        <div class="col l-4 m-4 c-12">
 
-                            <div class="sanpham active   ">
+                            <div class="sanpham-product">
                                 <div class="product__sport-wrap flex-cl">
-                                    <div class="sp__combo1">
+                                    <div class="sp__combo">
                                         <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/quan1.jpg" alt=""></a>
                                         <div class="product__sport">
                                             <a href="" class="product__sport-link">
@@ -463,7 +562,7 @@
                                             </p>
                                         
                                         </div>
-                                        <div class="detail-product1">
+                                        <div class="detail-product">
                                             <a href="">
                                                <i class="fas fa-search"></i>
                                             </a>
@@ -478,7 +577,7 @@
                                         </div>
                                     </div>
             
-                                    <div class="sp__combo2">
+                                    <div class="sp__combo">
                                         <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/quan2.jpg" alt=""></a>
                                         <div class="product__sport">
                                             <a href="" class="product__sport-link">
@@ -492,7 +591,7 @@
                                             </p>
                                         
                                         </div>
-                                        <div class="detail-product2">
+                                        <div class="detail-product">
                                             <a href="">
                                                <i class="fas fa-search"></i>
                                             </a>
@@ -507,7 +606,7 @@
                                         </div>
                                     </div>
             
-                                    <div class="sp__combo3">
+                                    <div class="sp__combo">
                                         <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/quan3.jpg" alt=""></a>
                                         <div class="product__sport">
                                             <a href="" class="product__sport-link">
@@ -521,7 +620,7 @@
                                             </p>
                                         
                                         </div>
-                                        <div class="detail-product3">
+                                        <div class="detail-product">
                                             <a href="">
                                                <i class="fas fa-search"></i>
                                             </a>
@@ -536,7 +635,7 @@
                                         </div>
                                     </div>
             
-                                    <div class="sp__combo4">
+                                    <div class="sp__combo">
                                         <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/quan4.jpg" alt=""></a>
                                         <div class="product__sport">
                                             <a href="" class="product__sport-link">
@@ -550,7 +649,7 @@
                                             </p>
                                         
                                         </div>
-                                        <div class="detail-product4">
+                                        <div class="detail-product">
                                             <a href="">
                                                <i class="fas fa-search"></i>
                                             </a>
@@ -578,11 +677,11 @@
                             </div>
             
                         </div>
-                        <div class="col l-4">
+                        <div class="col l-4 m-4 c-12">
 
-                            <div class="sanpham active" >
+                            <div class="sanpham-product" >
                                 <div class="product__sport-wrap flex-cl">
-                                    <div class="sp__combo1">
+                                    <div class="sp__combo">
                                         <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/b-th-thao-nam-alh17-12-bo-do-nam-alh17-04-large.jpg" alt=""></a>
                                         <div class="product__sport">
                                             <a href="" class="product__sport-link">
@@ -596,7 +695,7 @@
                                             </p>
                                         
                                         </div>
-                                        <div class="detail-product1">
+                                        <div class="detail-product">
                                             <a href="">
                                                <i class="fas fa-search"></i>
                                             </a>
@@ -612,7 +711,7 @@
                                         
                                     </div>
             
-                                    <div class="sp__combo2">
+                                    <div class="sp__combo">
                                         <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/qu-n-ao-th-thao-nam-alh17-03-bo-do-nam-aristino-alh17-01-large.jpg" alt=""></a>
                                         <div class="product__sport">
                                             <a href="" class="product__sport-link">
@@ -626,7 +725,7 @@
                                             </p>
                                         
                                         </div>
-                                        <div class="detail-product2">
+                                        <div class="detail-product">
                                             <a href="">
                                                <i class="fas fa-search"></i>
                                             </a>
@@ -641,7 +740,7 @@
                                         </div>
                                     </div>
             
-                                    <div class="sp__combo3">
+                                    <div class="sp__combo">
                                         <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/qu-n-ao-th-thao-nam-alh17-09-bo-do-nam-aristino-al03-tim-than-large.jpg" alt=""></a>
                                         <div class="product__sport">
                                             <a href="" class="product__sport-link">
@@ -655,7 +754,7 @@
                                             </p>
                                         
                                         </div>
-                                        <div class="detail-product3">
+                                        <div class="detail-product">
                                             <a href="">
                                                <i class="fas fa-search"></i>
                                             </a>
@@ -670,7 +769,7 @@
                                         </div>
                                     </div>
             
-                                    <div class="sp__combo4">
+                                    <div class="sp__combo">
                                         <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/qu-n-ao-th-thao-nam-alh17-10-bo-do-nam-arisitno-alh1712-03-large.jpg" alt=""></a>
                                         <div class="product__sport">
                                             <a href="" class="product__sport-link">
@@ -684,7 +783,7 @@
                                             </p>
                                         
                                         </div>
-                                        <div class="detail-product4">
+                                        <div class="detail-product">
                                             <a href="">
                                                <i class="fas fa-search"></i>
                                             </a>
@@ -706,18 +805,832 @@
                                 </div>
                         </div>
                     </div>
-
                 </div>
 
 
-                <div class="btn-next-page">
-                    <div class="next-page-block"><i class="fas fa-angle-left"></i></div>
-                    <div class="next-page-block active">1</div>
-                    <div class="next-page-block" >2</div>
-                    <div class="next-page-block">3</div>
-                    <div class="next-page-block"><i class="fas fa-angle-right"></i></div>
+                    <!-- PAGE 2 -->
+                    <div class="row show-product">
+                    <div class="col l-4 m-4 c-12">
+                        <div class="sanpham-product">
+                            <div class="product__sport-wrap flex-cl">
+                                <div class="sp__combo">
+                                    <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/QUANAU1.jpg" alt=""></a>
+                                    <div class="product__sport">
+                                        <a href="" class="product__sport-link">
+                                          
+        
+                                            QUẦN ÂU NAM ATR006S7
+                                        </a>
+                                    </div>
+        
+                                    <div class="product__sport">
+                                        <p  class="product__sport-price">
+                                        360.000 đ
+                                        </p>
+                                    
+                                    </div>
+                                    <div class="detail-product">
+                                        <a href="">
+                                           <i class="fas fa-search"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span>Mua hàng</span>
+                                        </a>
+                                        <a href="">
+                                           <i class="fas fa-sync"></i>
+                                        </a>
+        
+                                    </div>
+                                </div>
+        
+                                <div class="sp__combo">
+                                    <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/QUÂNU2.jpg" alt=""></a>
+                                    <div class="product__sport">
+                                        <a href="" class="product__sport-link">
+                                            QUẦN ÂU NAM ATR002S7
+                                        </a>
+                                    </div>
+        
+                                    <div class="product__sport">
+                                        <p  class="product__sport-price">
+                                        500.000 đ
+                                        </p>
+                                    
+                                    </div>
+                                    <div class="detail-product">
+                                        <a href="">
+                                           <i class="fas fa-search"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span>Mua hàng</span>
+                                        </a>
+                                        <a href="">
+                                           <i class="fas fa-sync"></i>
+                                        </a>
+        
+                                    </div>
+                                </div>
+        
+                                <div class="sp__combo">
+                                    <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/QUÂNU3.jpg" alt=""></a>
+                                    <div class="product__sport">
+                                        <a href="" class="product__sport-link">
+                                            QUẦN ÂU NAM ATR002S8
+                                        </a>
+                                    </div>
+        
+                                    <div class="product__sport">
+                                        <p  class="product__sport-price">
+                                        250.000 đ
+                                        </p>
+                                    
+                                    </div>
+                                    <div class="detail-product">
+                                        <a href="">
+                                           <i class="fas fa-search"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span>Mua hàng</span>
+                                        </a>
+                                        <a href="">
+                                           <i class="fas fa-sync"></i>
+                                        </a>
+        
+                                    </div>
+                                </div>
+        
+                                <div class="sp__combo">
+                                    <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/QUÂNU4.jpg" alt=""></a>
+                                    <div class="product__sport">
+                                        <a href="" class="product__sport-link">
+                                            QUẦN ÂU NAM ATR002S5
+                                        </a>
+                                    </div>
+        
+                                    <div class="product__sport">
+                                        <p  class="product__sport-price">
+                                        440.000 đ
+                                        </p>
+                                    
+                                    </div>
+        
+                                    <div class="detail-product">
+                                        <a href="">
+                                           <i class="fas fa-search"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span>Mua hàng</span>
+                                        </a>
+                                        <a href="">
+                                           <i class="fas fa-sync"></i>
+                                        </a>
+        
+                                    </div>
+                                </div>
+                               
+                                
+                                
+                                
+            
+                            </div>
+                           
+        
+                            
+            
+        
+                        </div>
+        
+                    </div>
+                  
+               
+                <div class="col l-4 m-4 c-12">
+
+                    <div class="sanpham-product">
+                        <div class="product__sport-wrap flex-cl">
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/QUÂNU5.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                       
+                                        QUẦN ÂU NAM ATR002S9
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    200.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                            </div>
+    
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/QUÂNU6.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                                        QUẦN ÂU NAM ATR002S1
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    305.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                            </div>
+    
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/QUÂNU8.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                                        QUẦN ÂU NAM ATR002S4
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    550.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                            </div>
+    
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/TL1.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                                        DÂY LƯNG NAM ABL02707
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    500.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                            </div>
+                           
+                            
+                            
+                            
+        
+                        </div>
+                       
+    
+                        
+        
+    
+                    </div>
+    
+                </div>
+                <div class="col l-4 m-4 c-12">
+
+                    <div class="sanpham-product" >
+                        <div class="product__sport-wrap flex-cl">
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/DL2.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                                        DÂY LƯNG NAM ABL02701
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    550.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                                
+                            </div>
+    
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/DL3.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                                        DÂY LƯNG NAM ABL02702
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    550.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                            </div>
+    
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/AOO1.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                                        ÁO POLO NAM APS017S7
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    550.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                            </div>
+    
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/AOO2.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                                        ÁO THUN NAM ATS014S7
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    550.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                            </div>
+                           
+                            
+                            
+                            
+        
+                        </div>
                 </div>
             </div>
+                    </div>
+
+                <!-- PAGE 3 -->
+                <div class="row show-product">
+                    <div class="col l-4 m-4 c-12">
+                        <div class="sanpham-product">
+                            <div class="product__sport-wrap flex-cl">
+                                <div class="sp__combo">
+                                    <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/sang1.jpg" alt=""></a>
+                                    <div class="product__sport">
+                                        <a href="" class="product__sport-link">
+                                          
+        
+                                            ÁO THUN NAM ATS014S7
+                                        </a>
+                                    </div>
+        
+                                    <div class="product__sport">
+                                        <p  class="product__sport-price">
+                                        360.000 đ
+                                        </p>
+                                    
+                                    </div>
+                                    <div class="detail-product">
+                                        <a href="">
+                                           <i class="fas fa-search"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span>Mua hàng</span>
+                                        </a>
+                                        <a href="">
+                                           <i class="fas fa-sync"></i>
+                                        </a>
+        
+                                    </div>
+                                </div>
+        
+                                <div class="sp__combo">
+                                    <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/sang2.jpg" alt=""></a>
+                                    <div class="product__sport">
+                                        <a href="" class="product__sport-link">
+                                            ÁO POLO NAM APS010S7
+                                        </a>
+                                    </div>
+        
+                                    <div class="product__sport">
+                                        <p  class="product__sport-price">
+                                        500.000 đ
+                                        </p>
+                                    
+                                    </div>
+                                    <div class="detail-product">
+                                        <a href="">
+                                           <i class="fas fa-search"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span>Mua hàng</span>
+                                        </a>
+                                        <a href="">
+                                           <i class="fas fa-sync"></i>
+                                        </a>
+        
+                                    </div>
+                                </div>
+        
+                                <div class="sp__combo">
+                                    <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/sang3.jpg" alt=""></a>
+                                    <div class="product__sport">
+                                        <a href="" class="product__sport-link">
+                                            ÁO THUN DÀI TAY ALT17-05
+                                        </a>
+                                    </div>
+        
+                                    <div class="product__sport">
+                                        <p  class="product__sport-price">
+                                        250.000 đ
+                                        </p>
+                                    
+                                    </div>
+                                    <div class="detail-product">
+                                        <a href="">
+                                           <i class="fas fa-search"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span>Mua hàng</span>
+                                        </a>
+                                        <a href="">
+                                           <i class="fas fa-sync"></i>
+                                        </a>
+        
+                                    </div>
+                                </div>
+        
+                                <div class="sp__combo">
+                                    <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/sang4.jpg" alt=""></a>
+                                    <div class="product__sport">
+                                        <a href="" class="product__sport-link">
+                                            ÁO THUN DÀI TAY ALT17-07
+                                        </a>
+                                    </div>
+        
+                                    <div class="product__sport">
+                                        <p  class="product__sport-price">
+                                        440.000 đ
+                                        </p>
+                                    
+                                    </div>
+        
+                                    <div class="detail-product">
+                                        <a href="">
+                                           <i class="fas fa-search"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <span>Mua hàng</span>
+                                        </a>
+                                        <a href="">
+                                           <i class="fas fa-sync"></i>
+                                        </a>
+        
+                                    </div>
+                                </div>
+                               
+                                
+                                
+                                
+            
+                            </div>
+                           
+        
+                            
+            
+        
+                        </div>
+        
+                    </div>
+                  
+               
+                <div class="col l-4 m-4 c-12">
+
+                    <div class="sanpham-product">
+                        <div class="product__sport-wrap flex-cl">
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/sang5.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                       
+                                        ÁO THUN DÀI TAY ALT17-05
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    200.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                            </div>
+    
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/sang6.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                                        ÁO THUN DÀI TAY ALT17-07
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    305.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                            </div>
+    
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/QUÂNU8.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                                        QUẦN ÂU NAM ATR002S4
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    550.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                            </div>
+    
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/belt1.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                                        DÂY LƯNG NAM ABL02707
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    500.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                            </div>
+                           
+                            
+                            
+                            
+        
+                        </div>
+                       
+    
+                        
+        
+    
+                    </div>
+    
+                </div>
+                <div class="col l-4 m-4 c-12">
+
+                    <div class="sanpham-product" >
+                        <div class="product__sport-wrap flex-cl">
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/belt2.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                                        DÂY LƯNG NAM ABL02701
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    550.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                                
+                            </div>
+    
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/belt3.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                                        DÂY LƯNG NAM ABL02702
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    550.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                            </div>
+    
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/AOO1.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                                        ÁO POLO NAM APS017S7
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    550.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                            </div>
+    
+                            <div class="sp__combo">
+                                <a href="" class="product__sport-link"><img class="product__sport-img" src="./img/belt4.jpg" alt=""></a>
+                                <div class="product__sport">
+                                    <a href="" class="product__sport-link">
+                                        DÂY LƯNG NAM ABL02707
+                                    </a>
+                                </div>
+    
+                                <div class="product__sport">
+                                    <p  class="product__sport-price">
+                                    550.000 đ
+                                    </p>
+                                
+                                </div>
+                                <div class="detail-product">
+                                    <a href="">
+                                       <i class="fas fa-search"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span>Mua hàng</span>
+                                    </a>
+                                    <a href="">
+                                       <i class="fas fa-sync"></i>
+                                    </a>
+    
+                                </div>
+                            </div>
+                           
+                            
+                            
+                            
+        
+                        </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+                </div> 
+                  
+
+
+                <div class="btn-page-wrap">
+                    <div class="next-page-block btn-prev-page"><i class="fas fa-angle-left"></i></div>
+                    <div class="next-page-block page active">1</div>
+                    <div class="next-page-block page" >2</div>
+                    <div class="next-page-block page">3</div>
+                    <div class="next-page-block btn-next-page "><i class="fas fa-angle-right"></i></div>
+                </div>
+        </div>
 
         </div>
         </div>
@@ -728,7 +1641,7 @@
         <footer class="footer" >
             <div class="footer__wrap">
                 <div class="grid wide">
-                    <div class="ul-wrap">
+                    <div class="ul-wrap pd-body">
                     <ul class="footer-list">
     
                          <li class="footer-item footer-item-active">Về chúng tôi</li>
@@ -773,221 +1686,412 @@
     
         </footer>
     </div>
-    <!-- MODAL -->
-
-    <div class="modal">
-        <div class="modal-container Login">
-            <header class="modal-header">
-                <h4>ĐĂNG NHẬP</h4>
-                <div class="icon-modal">
-                <i class=" close-icon fas fa-times"></i>
-               </div>
-   
-            </header>
-   
-            <div class="modal-body">
-               <form id="frm-login" class="form-dn" method="POST" action="https://fs-07.web4s.vn/member/manager-account/ajax-login" novalidate="novalidate">
-                   <div class="form-group"> 
-                       <input class="form-control required" name="username" type="text" placeholder="Tên đăng nhập hoặc email" autocomplete="false" aria-required="true">
-                   </div>
-   
-                   <div class="form-group"> 
-                       <input class="form-control required" name="password" type="password" placeholder="Mật khẩu" autocomplete="false" aria-required="true">
-                   </div>
-   
-                   <div class="form-group col-md-12 no-padding clearfix hidden"> 
-                       <label class="control-label"> <input type="checkbox" name="remember_login"> Lưu thông tin </label>
-                   </div>
-   
-                   <div class="form-group"> 
-                       <button class="bt btn-default txt-upper btn-submit " type="submit"> 
-                            <span class="name"> Đăng nhập </span>
-                       </button>
-                   </div>
-   
-                   <div class="form-group">
-                       <p class="hoac">OR</p>
-                   </div>
-   
-                   <div class="form-group">
-                       <div class="fb">
-                         
-                           <span>   <i class="fab fa-facebook"></i> Đăng nhập bằng facebook</span>
-                       </div>
-                       <div class="gg">
-   
-                           <span> <i class="google-icon fab fa-google"></i> Đăng nhập bằng google</span>
-                       </div>
-                       <div class="login-link">
-                           <a href="">Đăng ký</a>
-                           <a href="">Quên mật khẩu</a>
-                       </div>
-   
-                   </div>
-   
-                      
-               </form>
-   
-            </div>
-        </div>
-   
-         <!-- DANG KY -->
-   
-        <div class="modal-container Regis ">
-           <header class="modal-header">
-               <h4>ĐĂNG KÝ</h4>
-               <div class="icon-modal">
-               <i class=" close-icon fas fa-times"></i>
-              </div>
-   
-           </header>
-   
-           <div class="modal-body">
-              <form id="frm-login" class="form-dn" method="POST" action="https://fs-07.web4s.vn/member/manager-account/ajax-login" novalidate="novalidate">
-                  <div class="grid">
-                      <div class="row">
-                          <div class="col l-6">
-                               <div class="form-group "> 
-                                   <input class="form-control required" name="username" type="text" placeholder="Tên đăng nhập" autocomplete="false" aria-required="true" >
-                                  
-                               </div>
-               
-                               <div class="form-group "> 
-                                   <input class="form-control required" name="password" type="password" placeholder="Mật khẩu"  aria-required="true">
-                                 
-                               </div>
-               
-                               <div class="form-group "> 
-                               <input type="email" class="form-control required" name="email" placeholder="Email">
-                               </div>
-   
-                               <div class="form-group "> 
-                                   <input type="text" class="form-control required" name="email" placeholder="Tỉnh thành">
-                                   </div>
-   
-   
-                          </div>
-                          <div class="col l-6">
-                           <div class="form-group "> 
-                               <input class="form-control required" name="username" type="text" placeholder="Họ và tên" autocomplete="false" aria-required="true">
-                           </div>
-           
-                           <div class="form-group "> 
-                               <input class="form-control required" name="password" type="password" placeholder="Tên đăng nhập" autocomplete="false" aria-required="true">
-                           </div>
-           
-                           <div class="form-group "> 
-                           <input type="email" class="form-control required" name="email" placeholder="Số điện thoại">
-                           </div>
-   
-                           <div class="form-group "> 
-                               <input type="text" class="form-control required" name="email" placeholder="Quận huyện">
-                           </div>
-   
-   
-                      </div>
-                       </div>
-   
-                       
-                   </div>
-   
-                  
-   
-                  <div class="form-group "> 
-                   <input type="text" class="form-control required" name="email" placeholder="Địa chỉ">
-                  </div>
-   
-                  <div class="form-group"> 
-                   <img src="https://fs-07.web4s.vn/contact/ContactPlugin/captcha?type=image&amp;model=CaptchaModel&amp;field=security_code&amp;width=120&amp;height=30&amp;theme=default&amp;length=6" vspace="2" class="captcha-img" alt="">
-                   <a href="contact.html" class="captcha-reload"><i class=" icon-refresh fas fa-sync-alt"></i></a>
-                   <div class="input text"><label for="captcha-input"><p></p></label><input name="data[CaptchaModel][security_code]" autocomplete="off" id="captcha-input" class="form-control captcha-input required" data-msg="Vui lòng nhập mã bảo vệ" placeholder="Mã bảo vệ" type="text" aria-required="true"></div>
-                 </div>
-                 <div class="form-group"> 
-                   <div class="grid">
-                       <div class="row">
-                           <div class="col l-4">
-                               <button class="bt btn-default txt-upper btn-submit " type="submit"> 
-                                   <span class="name"> ĐĂNG KÝ </span>
-                               </button>
-                               
-                           
-                           </div>
-                           <div class="col l-4">
-                               <button class="bt btn-default txt-upper btn-submit  " type="submit"> 
-                                   <span class="name"> HỦY BỎ</span>
-                               </button>
-                               
-                           
-                           </div>
-                       </div>
-                  </div>
-               </div>
-   
-                     
-              </form>
-   
+   <!-- MODAL -->
+<!-- DANG NHAP -->
+<div class="modal">
+    <div class="modal-container ">
+        <header class="modal-header Login">
+            <h4>ĐĂNG NHẬP</h4>
+            <div class="icon-modal-login">
+            <i class=" close-icon fas fa-times"></i>
            </div>
-       </div>
 
-       <script>
-        // MODAL
+        </header>
+
+        <div class="modal-body">
+           <form id="frm-login" class="form-dn" method="POST" action="https://fs-07.web4s.vn/member/manager-account/ajax-login" novalidate="novalidate">
+               <div class="form-group"> 
+                   <input class="form-control required" name="username" type="text" placeholder="Tên đăng nhập hoặc email" autocomplete="false" aria-required="true">
+               </div>
+
+               <div class="form-group"> 
+                   <input class="form-control required" name="password" type="password" placeholder="Mật khẩu" autocomplete="false" aria-required="true">
+               </div>
+
+               <div class="form-group col-md-12 no-padding clearfix hidden"> 
+                   <label class="control-label"> <input type="checkbox" name="remember_login"> Lưu thông tin </label>
+               </div>
+
+               <div class="form-group"> 
+                   <button class="bt btn-default txt-upper btn-submit " type="submit"> 
+                        <span class="name"> Đăng nhập </span>
+                   </button>
+               </div>
+
+               <div class="form-group">
+                   <p class="hoac">OR</p>
+               </div>
+
+               <div class="form-group">
+                   <div class="fb">
+                     
+                       <span>   <i class="fab fa-facebook"></i> Đăng nhập bằng facebook</span>
+                   </div>
+                   <div class="gg">
+
+                       <span> <i class="google-icon fab fa-google"></i> Đăng nhập bằng google</span>
+                   </div>
+                   <div class="login-link">
+                       <a href="">Đăng ký</a>
+                       <a href="">Quên mật khẩu</a>
+                   </div>
+
+               </div>
+
+                  
+           </form>
+
+        </div>
+    </div>
+
+    </div>
+
+     <!-- DANG KY -->
+
+     <div class="modal">
+
+    <div class="modal-container Regis ">
+       <header class="modal-header">
+           <h4>ĐĂNG KÝ</h4>
+           <div class="icon-modal-regis">
+           <i class=" close-icon fas fa-times"></i>
+          </div>
+
+       </header>
+
+       <div class="modal-body">
+          <form id="frm-login" class="form-dn" method="POST" action="https://fs-07.web4s.vn/member/manager-account/ajax-login" novalidate="novalidate">
+              <div class="grid">
+                  <div class="row">
+                      <div class="col l-6">
+                           <div class="form-group "> 
+                               <input class="form-control required" name="username" type="text" placeholder="Tên đăng nhập" autocomplete="false" aria-required="true" >
+                              
+                           </div>
+           
+                           <div class="form-group "> 
+                               <input class="form-control required" name="password" type="password" placeholder="Mật khẩu"  aria-required="true">
+                             
+                           </div>
+           
+                           <div class="form-group "> 
+                           <input type="email" class="form-control required" name="email" placeholder="Email">
+                           </div>
+
+                           <div class="form-group "> 
+                               <input type="text" class="form-control required" name="email" placeholder="Tỉnh thành">
+                               </div>
+
+
+                      </div>
+                      <div class="col l-6">
+                       <div class="form-group "> 
+                           <input class="form-control required" name="username" type="text" placeholder="Họ và tên" autocomplete="false" aria-required="true">
+                       </div>
+       
+                       <div class="form-group "> 
+                           <input class="form-control required" name="password" type="password" placeholder="Tên đăng nhập" autocomplete="false" aria-required="true">
+                       </div>
+       
+                       <div class="form-group "> 
+                       <input type="email" class="form-control required" name="email" placeholder="Số điện thoại">
+                       </div>
+
+                       <div class="form-group "> 
+                           <input type="text" class="form-control required" name="email" placeholder="Quận huyện">
+                       </div>
+
+
+                  </div>
+                   </div>
+
+                   
+               </div>
+
+              
+
+              <div class="form-group "> 
+               <input type="text" class="form-control required" name="email" placeholder="Địa chỉ">
+              </div>
+
+              <div class="form-group"> 
+               <img src="https://fs-07.web4s.vn/contact/ContactPlugin/captcha?type=image&amp;model=CaptchaModel&amp;field=security_code&amp;width=120&amp;height=30&amp;theme=default&amp;length=6" vspace="2" class="captcha-img" alt="">
+               <a href="contact.html" class="captcha-reload"><i class=" icon-refresh fas fa-sync-alt"></i></a>
+               <div class="input text"><label for="captcha-input"><p></p></label><input name="data[CaptchaModel][security_code]" autocomplete="off" id="captcha-input" class="form-control captcha-input required" data-msg="Vui lòng nhập mã bảo vệ" placeholder="Mã bảo vệ" type="text" aria-required="true"></div>
+             </div>
+             <div class="form-group"> 
+               <div class="grid">
+                   <div class="row">
+                       <div class="col l-4">
+                           <button class="bt btn-default txt-upper btn-submit " type="submit"> 
+                               <span class="name"> ĐĂNG KÝ </span>
+                           </button>
+                           
+                       
+                       </div>
+                       <div class="col l-4">
+                           <button class="bt btn-default txt-upper btn-submit  " type="submit"> 
+                               <span class="name"> HỦY BỎ</span>
+                           </button>
+                           
+                       
+                       </div>
+                   </div>
+              </div>
+           </div>
+
+                 
+          </form>
+
+       </div>
+   </div>
+
+
+</div>
+
+       <div class="modal ">
+        <div class="menu-bar">
+            <h2>MENU CHÍNH <i  class="close-menu-bar fas fa-times"></i></h2>
+            <ul class="menu-bar-list">
+                <li class="menu-bar-item"> <a href="index.html">Trang chủ</a>  </li>
+                <li class="menu-bar-item"> <a href="produce.html">Giới thiệu</a> </li>
+                <li class="menu-bar-item"> <a href="sanpham.html"> Sản phẩm</a> </li>
+                <li class="menu-bar-item"><a href="news.html"> Tin tức</a></li>
+                <li class="menu-bar-item"> <a href="collection.html"> Bộ sưu tập</a></li>
+                <li class="menu-bar-item"> <a href="contact.html"> Liên hệ</a></li>
+            </ul>
+        </div>
+    </div>
+    
+
+
+       
+
+   <!-- MODAL -->
+   <script>
+    var closeItemRegis = document.querySelector('.icon-modal-regis');
+var closeItemLogin = document.querySelector('.icon-modal-login');
+var loginContain = document.querySelector('.Login');
+var regisContain = document.querySelector('.Regis');
+var modals = document.querySelectorAll('.modal');
+var login = document.querySelectorAll('.dang-nhap');
+var regis = document.querySelectorAll('.dang-ky');
+
+
+login[0].onclick = function (e){
+e.preventDefault();
+modals[0].classList.add('active');
+
+}
+
+regis[0].onclick = function (e){
+e.preventDefault();
+modals[1].classList.add('active');
+
+
+
+
+}
+
+login[1].onclick = function (e){
+    e.preventDefault();
+    modals[0].classList.add('active');
+    
+    }
+    
+    regis[1].onclick = function (e){
+    e.preventDefault();
+    modals[1].classList.add('active');
+    
+    
+    
+    
+    }
+closeItemRegis.onclick = function(){
+
+modals[1].classList.remove('active');
+}
+closeItemLogin.onclick = function(){
+
+modals[0].classList.remove('active');
+}
+
+modals[0].onclick = function (){
+modals[0].classList.remove('active');
+
+}
+
+modals[1].onclick = function (){
+    modals[1].classList.remove('active');
+    
+    }
+loginContain.onclick = function(e){
+e.stopPropagation();
+}
+regisContain.onclick = function(e){
+e.stopPropagation();
+}
+</script>
+
+
+<script>
+
+    //menu bar
+var modals = document.querySelectorAll('.modal');
+var barBtn = document.querySelector('.bar-mobile');
+var closeMenuBar = document.querySelector('.close-menu-bar');
+barBtn.onclick = function (e){
+    e.preventDefault();
+    modals[2].classList.add('active');
+
+}
+closeMenuBar.onclick = function (){
+    modals[2].classList.remove('active');
+}
+</script>
+
+
+
+
+<script>
+
+    
+    //O TIM KIEM
+
+var search = document.querySelector('.search-link');
+var searchWrap = document.querySelector('.header-timkiem-wrap');
+
+search.onclick = function (e){
+   e.preventDefault();
+   searchWrap.classList.add("active")
   
+    search.onclick = function (e){
+   
+       searchWrap.classList.remove("active");
+      
+      
+    }
+
+}
+
+
+var cart = document.querySelector('.cart-link');
+var cartWrap = document.querySelector('.header-cart');
+
+cart.onclick = function (e){
+   e.preventDefault();
+   cartWrap.classList.add("active")
   
-  
-      var closeItems = document.querySelectorAll('.icon-modal');
-      var modalContain = document.querySelector('.Login');
-      var modalContainDK = document.querySelector('.Regis');
-      var modal = document.querySelector('.modal');
-      var login = document.querySelector('.dang-nhap');
-      var regis = document.querySelector('.dang-ky');
-  
-  
-      login.onclick = function (e){
-      e.preventDefault();
-      modal.classList.add('active');
-      modalContain.classList.add('active');
-      modalContainDK.classList.remove('active');
-  
-  
-  
-      }
-  
-      regis.onclick = function (e){
-      e.preventDefault();
-      modal.classList.add('active');
-  
-      modalContain.classList.remove('active');
-      modalContainDK.classList.add('active');
-  
-  
-  
-      }
-  
-      closeItems[0].onclick = function(){
-  
-      modal.classList.remove('active');
-      }
-      closeItems[1].onclick = function(){
-  
-      modal.classList.remove('active');
-      }
-  
-      modal.onclick = function (){
-      modal.classList.remove('active');
-  
-      }
-      modalContain.onclick = function(e){
-      e.stopPropagation();
-      }
-      modalContainDK.onclick = function(e){
-      e.stopPropagation();
-      }
-  
-  
-  
-  
-  
-  </script>   
+    cart.onclick = function (e){
+   
+       cartWrap.classList.remove("active");
+      
+      
+    }
+
+}
+
+</script>
+<!-- 
+//NEXT PAGE -->
+
+<script>
+   
+var numbers = document.querySelectorAll('.page');
+var productShows = document.querySelectorAll('.show-product');
+
+numbers[0].onclick = function () {
+    productShows[0].classList.add('active');
+    numbers[0].classList.add('active');
+    productShows[1].classList.remove('active');
+    numbers[1].classList.remove('active');
+   
+    productShows[2].classList.remove('active');
+    numbers[2].classList.remove('active');
+    
+
+}
+
+
+
+numbers[1].onclick = function () {
+    productShows[1].classList.add('active');
+    numbers[1].classList.add('active');
+    productShows[0].classList.remove('active');
+    numbers[0].classList.remove('active');
+    productShows[2].classList.remove('active');
+    numbers[2].classList.remove('active');
+   
+
+}
+
+numbers[2].onclick = function () {
+    productShows[2].classList.add('active');
+    numbers[2].classList.add('active');
+    productShows[1].classList.remove('active');
+    numbers[1].classList.remove('active');
+    productShows[0].classList.remove('active');
+    numbers[0].classList.remove('active');
+    
+   
+
+}
+
+
+var productShowLength =productShows.length;
+var nextPageItem = document.querySelector('.btn-next-page');
+var prevPageItem = document.querySelector('.btn-prev-page');
+
+var cout = 0;
+
+function viewNextPageItem () {
+
+numbers[cout].classList.remove('active');
+productShows[cout].classList.remove('active');
+
+if(cout < (productShowLength -1))
+{
+    cout++;
+}
+else{
+    cout=0;
+}
+productShows[cout].classList.add('active');
+numbers[cout].classList.add('active');
+
+
+}
+
+function viewPrevPageItem () {
+
+numbers[cout].classList.remove('active');
+productShows[cout].classList.remove('active');
+
+if(cout > 0)
+{
+    cout--;
+}
+else{
+    cout=(productShowLength-1);
+}
+productShows[cout].classList.add('active');
+numbers[cout].classList.add('active');
+
+
+}
+
+nextPageItem.onclick = function (){
+    viewNextPageItem();
+}
+
+prevPageItem.onclick = function (){
+   viewPrevPageItem();
+}
+
+
+
+
+</script>
       
 </body>
 </html>

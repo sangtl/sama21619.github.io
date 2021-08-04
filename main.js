@@ -1,69 +1,69 @@
-const slideItem = document.querySelectorAll('.slide');
-const slideLength = slideItem.length;
-const nextSlideItem = document.querySelector('.icon-right');
-const prevSlideItem = document.querySelector('.icon-left');
-const btnActives = document.querySelectorAll('.btn');
+// const slideItem = document.querySelectorAll('.slide');
+// const slideLength = slideItem.length;
+// const nextSlideItem = document.querySelector('.icon-right');
+// const prevSlideItem = document.querySelector('.icon-left');
+// const btnActives = document.querySelectorAll('.btn');
 
-let dem = 0 ;
-var interval;
+// let dem = 0 ;
+// var interval;
 
-function viewNextItem () {
+// function viewNextItem () {
 
-    slideItem[dem].classList.remove('active');
-    btnActives[dem].classList.remove('active');
+//     slideItem[dem].classList.remove('active');
+//     btnActives[dem].classList.remove('active');
 
-    if(dem < (slideLength -1))
-    {
-        dem++;
-    }
-    else{
-        dem=0;
-    }
-    slideItem[dem].classList.add('active');
-    btnActives[dem].classList.add('active');
+//     if(dem < (slideLength -1))
+//     {
+//         dem++;
+//     }
+//     else{
+//         dem=0;
+//     }
+//     slideItem[dem].classList.add('active');
+//     btnActives[dem].classList.add('active');
 
-    clearInterval(interval);
-    timer();
+//     clearInterval(interval);
+//     timer();
     
-}
+// }
 
 
-var timer = function () {
-        interval = setInterval(function () {
-           viewNextItem()
-        }, 5000);
-    };
+// var timer = function () {
+//         interval = setInterval(function () {
+//            viewNextItem()
+//         }, 5000);
+//     };
 
 
 
 
-function viewPreviousItem () {
-    slideItem[dem].classList.remove('active');
-    btnActives[dem].classList.remove('active');
-    if(dem >0)
-    {
-        dem--;
-    }
-    else {
-        dem = slideLength-1;
-    }
-    slideItem[dem].classList.add('active');
-    btnActives[dem].classList.add('active');
+// function viewPreviousItem () {
+//     slideItem[dem].classList.remove('active');
+//     btnActives[dem].classList.remove('active');
+//     if(dem >0)
+//     {
+//         dem--;
+//     }
+//     else {
+//         dem = slideLength-1;
+//     }
+//     slideItem[dem].classList.add('active');
+//     btnActives[dem].classList.add('active');
     
-}
+// }
 
-window.onload = function () {
+// window.onload = function () {
     
-    interval = setInterval(function () {
-        viewNextItem()
-     }, 5000);
-}
+//     interval = setInterval(function () {
+//         viewNextItem()
+//      }, 5000);
+// }
 
-nextSlideItem.onclick = function () {
-    viewNextItem();
-}
-prevSlideItem.addEventListener('click', viewPreviousItem);
-///END SLIDE
+// nextSlideItem.onclick = function () {
+//     viewNextItem();
+// }
+// prevSlideItem.addEventListener('click', viewPreviousItem);
+// ///END SLIDE
 
 
 
@@ -193,54 +193,136 @@ prevBelt.addEventListener('click', showPrevBelt);
 
 
 
-var closeItems = document.querySelectorAll('.icon-modal');
-var modalContain = document.querySelector('.Login');
-var modalContainDK = document.querySelector('.Regis');
-var modal = document.querySelector('.modal');
-var login = document.querySelector('.dang-nhap');
-var regis = document.querySelector('.dang-ky');
+
+// MODAL
 
 
-login.onclick = function (e){
+
+var closeItemRegis = document.querySelector('.icon-modal-regis');
+var closeItemLogin = document.querySelector('.icon-modal-login');
+var loginContain = document.querySelector('.Login');
+var regisContain = document.querySelector('.Regis');
+var modals = document.querySelectorAll('.modal');
+var login = document.querySelectorAll('.dang-nhap');
+var regis = document.querySelectorAll('.dang-ky');
+
+
+login[0].onclick = function (e){
+e.preventDefault();
+modals[0].classList.add('active');
+
+}
+
+regis[0].onclick = function (e){
+e.preventDefault();
+modals[1].classList.add('active');
+
+
+
+
+}
+
+login[1].onclick = function (e){
     e.preventDefault();
-    modal.classList.add('active');
-    modalContain.classList.add('active');
-    modalContainDK.classList.remove('active');
-
-
+    modals[0].classList.add('active');
     
-}
-
-regis.onclick = function (e){
+    }
+    
+    regis[1].onclick = function (e){
     e.preventDefault();
-    modal.classList.add('active');
-
-    modalContain.classList.remove('active');
-    modalContainDK.classList.add('active');
-
-
+    modals[1].classList.add('active');
     
+    
+    
+    
+    }
+
+closeItemRegis.onclick = function(){
+
+modals[1].classList.remove('active');
+}
+closeItemLogin.onclick = function(){
+
+modals[0].classList.remove('active');
 }
 
-closeItems[0].onclick = function(){
+modals[0].onclick = function (){
+modals[0].classList.remove('active');
+
+}
+
+modals[1].onclick = function (){
+    modals[1].classList.remove('active');
+    
+    }
+loginContain.onclick = function(e){
+e.stopPropagation();
+}
+regisContain.onclick = function(e){
+e.stopPropagation();
+}
+
+
+
+
+
+
+ 
+//O TIM KIEM
+
+var search = document.querySelector('.search-link');
+var searchWrap = document.querySelector('.header-timkiem-wrap');
+
+search.onclick = function (e){
+    e.preventDefault();
+    searchWrap.classList.add("active");
+  
+        search.onclick = function (event){
+           
+    
+            searchWrap.classList.remove("active");
+           
+           
+           
+         }
+}
+
+
+var cart = document.querySelector('.cart-link');
+var cartWrap = document.querySelector('.header-cart');
+
+cart.onclick = function (e){
+    e.preventDefault();
+    cartWrap.classList.add("active")
    
-    modal.classList.remove('active');
-}
-closeItems[1].onclick = function(){
-   
-    modal.classList.remove('active');
-}
-
-modal.onclick = function (){
-    modal.classList.remove('active');
+     cart.onclick = function (e){
+    
+        cartWrap.classList.remove("active");
+       
+       
+     }
 
 }
-modalContain.onclick = function(e){
-    e.stopPropagation();
+
+//menu bar
+var modals = document.querySelectorAll('.modal');
+var barBtn = document.querySelector('.bar-mobile');
+var closeMenuBar = document.querySelector('.close-menu-bar');
+barBtn.onclick = function (e){
+    e.preventDefault();
+    modals[2].classList.add('active');
+
 }
-modalContainDK.onclick = function(e){
-    e.stopPropagation();
+closeMenuBar.onclick = function (){
+    modals[2].classList.remove('active');
 }
+
+
+
+
+
+
+
 
 
 

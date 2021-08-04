@@ -17,6 +17,9 @@ html,body{
     margin-left: 80px;
 
 }
+.day_lung_nam{
+    display: block;
+}
 
 .content{
     width: 100%;
@@ -40,10 +43,15 @@ html,body{
     font-size: 80px;
     color: #fff;
     cursor: pointer;
+    opacity: 0.05;
+    
 
 
    
     
+}
+.icon-right:hover, .icon-left:hover{
+    opacity: 1;
 }
 .icon-right {
     position: absolute;
@@ -55,6 +63,7 @@ html,body{
     font-size: 80px;
     color: #fff;
     cursor: pointer;
+    opacity: 0.05;
    
 
    
@@ -108,6 +117,79 @@ html,body{
     
 
 }
+.btn-menu-main{
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 50px;
+    width: 50px;
+    text-align: center;
+}
+.bar-mobile{
+    text-align: center;
+}
+
+.bc{
+    background-color: #1e1e1e;
+}
+
+
+.header-timkiem-wrap{
+    background: #ffffff;
+    height: 58px;
+    padding: 10px;
+    width: 400px;
+    z-index: 99;
+    position: absolute;
+    left: -280px;
+    bottom: -70px;
+    display: none;
+    box-shadow: 0  1px 2px #777;
+    border: 1px solid #383838;
+}
+.header-timkiem-wrap.active{
+    display: flex;
+}
+.header-cart{
+    background: #ffffff;
+    height: 73px;
+    padding: 10px;
+    width: 290px;
+    z-index: 99;
+    font-size: 14px;
+    padding: 12px;
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+    display: none;
+    box-shadow: 0  1px 2px #777;
+    border: 1px solid #383838;
+
+}
+.header-cart.active{
+    display: flex;
+}
+
+.o-tim-kiem{
+    background: #ffffff;
+    padding: 6px 12px;
+    border: none;
+    width: 80%;
+    margin: 0 12px;
+    height: 36px;
+    
+}
+.btn-search{
+    background: none;
+    border: none;
+}
+.header-timkiem-wrap i{
+ cursor: pointer;
+ font-size: 18px;
+
+}
+.header__navbar-list{
+    position: relative;
+}
 
 .header__navbar-list-2{
     padding-left: 30px;
@@ -126,26 +208,49 @@ html,body{
     color: #ba933e;
     
 }
-
-.slide{
-   display: none;
-}
-.slide.active{
+.item img{
     width: 100%;
     display: block;
+    height: 500px;
 }
-
-.change-img
-{
-    
-    text-align: center;
+.owl-carousel .owl-nav .owl-prev{
     position: absolute;
-    top:80%;
-    left: 0;
-    right: 0;
-
+    left: 0px;
+    top:30%;
+    width: 80px;
+    height: 80px;
+   
+  
 }
-.btn{
+.owl-carousel .owl-nav .owl-next{
+    position: absolute;
+    right: 0;
+    top:30%;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+   
+    background-color: none;
+    
+}
+.owl-nav i{
+    font-size: 80px;
+    color:#fff;
+    background-color: none;
+    opacity: 0;
+  
+}
+.owl-nav i:hover{
+    background-color: #ba933e;
+    color:#fff;
+    opacity: 1;
+   
+}
+#slider-combo , #slider-quan, #slider-ao {
+    position: relative;
+}
+
+/* .btn{
     background: rgba(0,0,0,0);
     width: 14px;
     height: 14px;
@@ -155,14 +260,9 @@ html,body{
     border: 2px solid #fff;
     cursor: pointer;
     text-indent:-9999px ;
-}
-.btn.active {
-    background: #fff;
-    color: white;
-}
-#next{
-    display: none;
-}
+} */
+
+
 .content__title-h2{
     color:#000000;
     font-size: 40px;
@@ -180,7 +280,7 @@ html,body{
 }
 .content__banner{
     width: 100%;
-    height: 700px;
+   
 }
 .content__banner{
     padding-top: 30px;
@@ -220,13 +320,14 @@ html,body{
     width: 100%;
     height: 100%;
     background: rgba(255,255,255,.4);
+    z-index: 1;
    
 }
 .item__heading h4{
     font-weight: bold;
     color: #1d1d1d;
     font-size: 23px;
-    z-index: 10;
+    z-index: 1;
     display: block;
     
     
@@ -264,7 +365,7 @@ html,body{
     left: 0;
     top:0;
     width: 100%;
-    z-index: 10;
+    z-index: 1;
     text-transform: uppercase;
     text-align: center;
     
@@ -314,21 +415,23 @@ html,body{
 .item__saleoff{
     position: relative;
 }
-.cotent__row{
+.image-bg{
     width: 100%;
-    background-image: url('https://fs-07.web4s.vn/uploads/plugin/custom_img/2018-06-13/custom-new-daily-deal-bg.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
     height: 560px;
     
+    
 }
+
 .content__row-ND{
-    width: 100%;
-    position: absolute;
+    width: 50%;
+    position: absolute;   
     top:0;
     right: 0;
+  
     
+}
+.background-img{
+    position: relative;
 }
 .title-block-product{
     font-size: 40px;
@@ -348,19 +451,20 @@ html,body{
 }
 .daylung1{
     position: relative;
+  
 }
-.daylung__img{
-    height: 300px;
-    width: 225px;
-    
-}
-.wrap__daylung{
-    display: flex;
-    align-items: center;
+.daylung2{
     position: relative;
-    
-   
+  
 }
+
+.daylung__img{
+
+    width: 225px;
+    height: 300px;
+    
+}
+
 .prev-icon:hover, .next-icon:hover{
     color: orange;
     opacity: 1;
@@ -374,12 +478,12 @@ html,body{
 }
 .prev-icon{
     position: absolute;
-    top:40%;
+    top:50%;
     font-size: 80px;
     width: 120px;
     height: 120px;
     margin-top: -60px;
-    left: -70px;
+    left: -8%;
     outline: none;
     border: none;
     opacity: 0.4;
@@ -389,12 +493,12 @@ html,body{
 }
 .next-icon{
     position: absolute;
-    top:40%;
+    top:50%;
     font-size: 80px;
     width: 120px;
     height: 120px;
     margin-top: -60px;
-    right: 20px;
+    right: 10%;
     outline: none;
     border: none;
     opacity: 0.4;
@@ -528,7 +632,7 @@ html,body{
 .product__news-img{
     width: 360px;
     height: 200px;
-    object-fit: cover;
+   object-fit: cover;
    
 }
 .news__time a{
@@ -613,6 +717,7 @@ html,body{
 .ul-wrap{
     display: flex;
     justify-content: space-evenly;
+   
     
 }
 .footer-list{
@@ -656,6 +761,12 @@ html,body{
 .sanpham{
     display: none;
 }
+.show-product{
+    display: none;
+}
+.show-product.active{
+    display: flex;
+}
 .title-blogs-item:hover{
     color: orange;
 }
@@ -673,13 +784,15 @@ html,body{
     width: 100%;
     text-align: center;
     display: none;
-    z-index: 100;
-    
+    z-index: 1;
+
    
    
 }
 .daylung1:hover .detail-product-left{
     display: block;
+   
+    
    
 }
 .daylung2:hover .detail-product-right{
@@ -687,11 +800,12 @@ html,body{
 }
 .daylung__img{
     display: block;
+
 }
 
 
-.detail-product-left a ,.detail-product-right a,.detail-product1 a,
-.detail-product2 a,.detail-product3 a,.detail-product4 a{
+.detail-product-left a ,.detail-product-right a,.detail-product a
+{
     text-decoration: none;
     display: inline-block;
     color: #fff;
@@ -701,7 +815,7 @@ html,body{
    
 }
 .detail-product-left a:hover, .detail-product-right a:hover, 
-.detail-product1 a:hover,.detail-product2 a:hover,.detail-product3 a:hover,.detail-product4 a:hover
+.detail-product a:hover
 {
     background-color: orange;
 }
@@ -709,11 +823,11 @@ html,body{
     position: relative;
 }
 
-.sp__combo1,.sp__combo2,.sp__combo3,.sp__combo4{
+.sp__combo{
     position: relative;
 }
 
-.detail-product1,.detail-product2,.detail-product3,.detail-product4{
+.detail-product{
     
     position: absolute;
     bottom: 24%;
@@ -725,37 +839,37 @@ html,body{
    
    
 }
-.sp__combo1:hover .detail-product1{
-    display: block;
-}
-.sp__combo2:hover .detail-product2{
+.sp__combo:hover .detail-product{
     display: block;
 }
 
-.sp__combo3:hover .detail-product3{
-    display: block;
-}
-
-.sp__combo4:hover .detail-product4{
-    display: block;
-}
 .content__pro{
     text-align: justify;
     padding: 20px 80px;
     font-size: 14px;
+    color: black;
    
    
+}
+.produce{
+    margin-bottom: 100px;
 }
 
 .produce p , .produce h2, .produce span{
     padding-left: 80px ;
     padding-right: 80px;
+    
+
+}
+.content__pro{
+    font-size: 18px;
 
 }
 .produce h2{
     padding-top: 30px;
     font-weight: bold;
     color: black;
+    
 }
 .time-icon{
     margin-right: 10px;
@@ -949,35 +1063,22 @@ html,body{
     right: 0;
     bottom: 0;
     background: rgba(0,0,0,0.4);
-    align-items: center;
-    justify-content: center;
     display: none;
-    animation: modalFadeIn ease 0.4s;
-    z-index: 12;
+    z-index: 9000;
 }
 .modal.active{
     display: flex;
+   
 
 }
 .modal-container{
     background-color: #fff;
     width:300px;
     min-height: 200px;
-    position: relative;
-    max-width: calc(100%-32px);
-    z-index: 9999;
+    margin: auto;
+    z-index: 10000;
+   
     
-}
-
-
-.Regis.active{
-    display: block;
-}
-.Login{
-    display: none;
-}
-.Login.active{
-    display: block;
 }
 
 .modal-header{
@@ -1026,7 +1127,7 @@ html,body{
     margin-top: 20px;
     
 }
-.icon-modal{
+.icon-modal-regis , .icon-modal-login{
     cursor: pointer;
 }
 .login-link a{
@@ -1034,13 +1135,8 @@ html,body{
     margin-right: 20px;
 }
 .Regis{
-    background-color: #fff;
     width:500px;
     min-height: 200px;
-    position: relative;
-    max-width: calc(100%-32px);
-    z-index: 9999;
-    display: none;
 
 
 }
@@ -1210,7 +1306,7 @@ html,body{
 
 /* BTN NEXTPAGE */
 
-.btn-next-page{
+.btn-page-wrap{
     display: flex;
     margin-bottom: 100px;
     margin-top: 80px;
